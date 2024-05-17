@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background: url(/img/forest.jpg) no-repeat center center/ cover;
+    height: 100vh;
+    position: relative;
+}
+
+#open-btn{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    width: 350px;
+    height: 60px;
+    font-size: 2rem;
+    background: transparent;
+    color: #ffff;
+    border: solid 2px #ffff;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 3px black;
+    transition: 1s;
+}
+
+#open-btn:hover{
+   background-color: #ffff; 
+   color: black;
+}
+
+#model{
+    position: absolute;
+    background-color: #ffff;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    animation-name: animatedmodel;
+    animation-duration: .4s;
+}
+
+#close-btn{
+    font-size: 3rem;
+    cursor: pointer;
+    color: blue;
+}
+
+#model-container{
+    display: none;
+    position: fixed;
+    top: o;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0, .2 );
+}
+
+@keyframes animatedmodel{
+    from{
+        top: -200px;
+        opacity: 0;
+    }
+
+    to{
+        top: 40%;
+        opacity: 1;
+    }
+}
